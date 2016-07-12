@@ -1,6 +1,6 @@
 'use strict';
 
-// var DOM = require("./DOMHandler");
+var DOM = require("./DOMHandler");
 let RNG = require("./randomNum");
 let robots = require('./robots');
 const $ = require('jQuery');
@@ -11,77 +11,70 @@ let weapons = require('./weapons');
 let robot1;
 let robot2;
 
-$('#playerOneAttack').click(function() {
-    console.log("you clicked playerOneAttack")
-})
-$('#playerTwoAttack').click(function() {
-    console.log("you clicked playerTwoAttack")
-})
 
+document.addEvent
 
+var FightingBots = (r1, r2) => {
+    DOM = require("./DOMHandler");
+    // robot1 = r1;
+    // robot2 = r2;
+    robots.attack = true;
+    // DOM.display(robot1);
+    // DOM.display(robot2);
+    // DOM.addAtkBtn();
+    $("#playerOneAttack").click(whosTurnIsItAnyway);
+    $("#playerTwoAttack").click(whosTurnIsItAnyway);
+};
 
-
-// var FightingBots = (r1, r2) => {
-//     DOM = require("./DOMHandler");
-//     robot1 = r1;
-//     robot2 = r2;
-//     robot1.attackingNow = true;
-//     DOM.display(robot1);
-//     DOM.display(robot2);
-//     DOM.addAtkBtn();
-//     $("#playerOneAttack").click(turnFinder);
-//     $("#playerTwoAttack").click(turnFinder);
-// };
-
-var turnFinder = () => {
-    if (robot1.attackingNow) {
-        damageCalculation(robot1, robot2);
-        robot1.attackingNow = false;
+var whosTurnIsItAnyway = (robot1, robot2) => {
+    if (robot1.attack) {
+        damagesIncurred(robot1, robot2);
+        robot1.attack = false;
     } else {
-        damageCalculation(robot2, robot1);
-        robot1.attackingNow = true;
+        damagesIncurred(robot2, robot1);
+        robot1.attack = true;
     }
 };
 
-
 var getRandomDamage = (robot) => {
-    $('#playerOneAttack').click(function() {
-        var max = robots.maxDam;
-        var min = robots.minDam;
-        return RNG();
-    });
-    console.log('attack1', robots.maxdam)
-    // console.log('you clicked me')
-    // console.log('grd', getRandomDamage)
+    var max = robots.maxDam;
+    var min = robots.minDam;
+    return RNG()
 };
 
-
-var damageCalculation = (attacker, defender) => {
-    $('#playerOneAttack').click(function() {
+// console.log('grd', getRandomDamage)
 
 
-        var damageDone = getRandomDamage(attacker) + attacker.modification.damageBonus;
-        if (checkHit(defender)) {
-            defender.HP -= damageDone;
-            DOM.battleMessage(attacker, defender, damageDone);
-            DOM.display(defender);
-        } else DOM.missMessage(attacker);
+var damagesIncurred = (attacker, defender) => {
 
-        if (defender.HP <= 0) {
-            $("#outputArea").html(`<div id="gameover"> GAME OVER ${attacker.name} wins!</div>`);
-        }
-    });
+    var damageDone = getRandomDamage(attacker) + attacker;
+    if (didItGetHit(defender)) {
+        defender.Health -= damageDone;
+        // DOM.battleMessage(attacker, defender, damageDone);
+        // DOM.display(defender);
+    }
+    // } else DOM.missMessage(attacker);
+    if (defender.Health <= 0) {
+        // $("#outputArea").html(`<div id="gameover"> GAME OVER ${attacker.name} wins!</div>`);
+    }
     console.log(damageDone)
 };
 
-var checkHit = (defender) => {
-    if (Math.random() * 100 > defender.modification.evasion) {
+var didItGetHit = (defender) => {
+    if (RNG() * 100 > defender) {
         return true;
     } else return false;
 };
 
-return getRandomDamage();
+
+return FightingBots()
+return whosTurnIsItAnyway()
+return getRandomDamage()
+return damagesIncurred()
+return didItGetHit()
+
+console.log("hello", FightingBots)
 
 module.exports = {
-    turnFinder, getRandomDamage, damageCalculation, checkHit
+    FightingBots, whosTurnIsItAnyway, getRandomDamage, damagesIncurred, didItGetHit
 };
