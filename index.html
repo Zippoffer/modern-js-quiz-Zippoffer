@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>robutt wharves</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -11,27 +13,41 @@
 
 
 
-
+<div class="container">
+<div class="row">
+<!-- <div class="col-xs-12 col-md-8"> -->
+ <div class="col-md-9 col-md-push-3">
 <div>
-<input id="playerOneInput" type="text" name="playerOne">
+<input id="playerOneInput" type="text" name="playerOne" placeholder="name your robot">
 <select id="playerOneRobots">
+	<option value="none">pick a robot</option>
 	<option value="MotoBot">MotoBot</option>
 	<option value="TankBot">TankBot</option>
 	<option value="BlenderBot">BlenderBot</option>
 </select>
-<button id="playerOneAttack">ATTACK</button>
+<!-- <button id="playerOneAttack">ATTACK</button> -->
+<button id="playerOneAttack" type="button" class="btn btn-danger">Attack</button>
 </div>
 
-
+<!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+ -->
 
 <div>
-<input id="playerTwoInput" type="text" name="playerTwo">
+<input id="playerTwoInput" type="text" name="playerTwo" placeholder="name your robot">
 <select id="playerTwoRobots">
+	<option value="none">pick a robot</option>
 	<option value="RabbitBot">RabbitBot</option>
 	<option value="KittenBot">KittenBot</option>
 	<option value="PuppyBot">PuppyBot</option>
 </select>
-<button id="playerTwoAttack">ATTACK</button>
+<!-- <button id="playerTwoAttack">ATTACK</button> -->
+<button id="playerTwoAttack" type="button" class="btn btn-danger">Attack</button>
 </div>
 
 
@@ -41,7 +57,9 @@
 <div id="outputAreaTwo">
 	
 </div>
-
+</div>
+</div>
+</div>
 
 
 

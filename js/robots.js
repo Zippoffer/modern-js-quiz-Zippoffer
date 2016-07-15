@@ -50,24 +50,24 @@ DevilBot.prototype = new Robot();
 function MotoBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Moto_Bot";
     this.attack = null;
-    console.log("MotoBot", this.Health)
-    console.log("MotoAttack", this.Damage)
+    // console.log("MotoBot", this.Health)
+    // console.log("MotoAttack", this.Damage)
 }
 MotoBot.prototype = new GoBot(5, 89);
 
 function TankBot(minRobotHealth, maxRobotHealth) {
     this.name = "Tank_Bot";
     this.attack = null;
-    console.log("TankBot", this.Health)
-    console.log("TankAttack", this.Damage)
+    // console.log("TankBot", this.Health)
+    // console.log("TankAttack", this.Damage)
 }
 TankBot.prototype = new GoBot(85, 100);
 
 function BlenderBot(minRobotHealth, maxRobotHealth) {
     this.name = "Blender_Bot";
     this.attack = null;
-    console.log("BlenderBot", this.Health)
-    console.log("BlenderAttack", this.Damage)
+    // console.log("BlenderBot", this.Health)
+    // console.log("BlenderAttack", this.Damage)
 }
 BlenderBot.prototype = new GoBot(85, 100);
 
@@ -82,24 +82,24 @@ let blenderBot = new BlenderBot();
 function RabbitBot(minRobotHealth, maxRobotHealth) {
     this.name = "Rabbit_Bot";
     this.attack = null;
-    console.log("RabbitBot", this.Health)
-    console.log("RabbitAttack", this.Damage)
+    // console.log("RabbitBot", this.Health)
+    // console.log("RabbitAttack", this.Damage)
 }
 RabbitBot.prototype = new DevilBot(80, 100);
 
 function KittenBot(minRobotHealth, maxRobotHealth) {
     this.name = "Kitten_Bot";
     this.attack = null;
-    console.log("KittenBot", this.Health)
-    console.log("KittenAttack", this.Damage)
+    // console.log("KittenBot", this.Health)
+    // console.log("KittenAttack", this.Damage)
 }
 KittenBot.prototype = new DevilBot(80, 100);
 
 function PuppyBot(minRobotHealth, maxRobotHealth) {
     this.name = "Puppy_Bot";
     this.attack = null;
-    console.log("PuppyBot", this.Health)
-    console.log("PuppyAttack", this.Damage)
+    // console.log("PuppyBot", this.Health)
+    // console.log("PuppyAttack", this.Damage)
 }
 PuppyBot.prototype = new DevilBot(80, 100);
 
