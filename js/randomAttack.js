@@ -6,6 +6,6 @@ function RandomAttack(attackMax, attackMin) {
     return randomAttack;
 }
 
-module.exports {
+module.exports = {
     RandomAttack
-};
+}

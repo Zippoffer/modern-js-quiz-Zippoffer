@@ -1,10 +1,11 @@
 'use strict';
 
+
+
+let $ = require('jQuery');
 let DOM = require("./DOMHandler");
-// let RNG = require("./randomNum");
 let robots = require('./robots');
-const $ = require('jQuery');
-let weapons = require('./weapons');
+
 // console.log(robots);
 ///////////////////
 
@@ -23,7 +24,7 @@ const calcDmg = function(playerOne, playerTwo) {
     return playerTwo;
 };
 calcDmg(robot1, robot2);
-console.log(calcDmg(robot1, robot2));
+// console.log(calcDmg(robot1, robot2));
 
 
 
@@ -32,11 +33,11 @@ const moreDmg = function(playerTwo, playerOne) {
     return playerOne;
 }
 moreDmg(robot2, robot1);
-console.log(moreDmg(robot2, robot1));
+// console.log(moreDmg(robot2, robot1));
 
 
-console.log("robot1 damage is : ", robot1.Damage)
-console.log("robot2 damage is : ", robot2.Damage)
+// console.log("robot1 damage is : ", robot1.Damage)
+// console.log("robot2 damage is : ", robot2.Damage)
 
 
 module.exports = {

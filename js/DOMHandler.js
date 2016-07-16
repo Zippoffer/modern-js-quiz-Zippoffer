@@ -1,21 +1,24 @@
 'use strict';
 
-
+var $ = require('jQuery');
 let main = require('./main');
-let robots = require('./robots');
-let weapons = require('./weapons');
-const $ = require('jQuery');
+// let robots = require('./robots')
+
 
 
 
 const calcDmg = function(playerOne, playerTwo) {
     playerTwo.Health - playerOne.Damage;
     return playerTwo;
-
 };
+// console.log("Damages", playerTwo.Health)
 
-
-
+// playerOne.Health = (playerOne.Health - playerTwo.Damage);
+// console.log("p1H", playerOne.Health)
+// // players[1].Health = (players[1].Health - players[0].Damage);
+// // players[0].Health = (players[0].Health - players[1].Damage);
+// playerTwo.Health = (playerTwo.Health - playerOne.Damage);
+// console.log("p2H", playerTwo.Health)
 
 const Attack1 = (playerOne, playerTwo) => {
 
@@ -31,9 +34,6 @@ const Attack2 = (playerTwo, playerOne) => {
 };
 
 
-
-
-
 ///////////////**********console logging the player attacks*************\\\\\\\\\\\\\\\\\\\
 $("#playerOneAttack").click(function() {
 
@@ -46,9 +46,10 @@ $("#playerOneAttack").click(function() {
 
     Attack1(playerOne, playerTwo);
     // Attack2(playerTwo, playerOne);
+    // calcDmg(playerOne, playerTwo);
+    calcDmg(playerTwo.Health - playerOne.Damage);
+    // $("#outputAreaOne").append(`<div>${playerOneInput.value} the ${playerOneRobots.value} attack caused ${playerOne.Damage} damage</div>`)
 
-    $("#outputAreaOne").append(`<div>${playerOneInput.value} the ${playerOneRobots.value} attack caused ${playerOne.Damage} damage</div>`)
-    console.log("p1", this.value)
 })
 
 
@@ -65,9 +66,10 @@ $("#playerTwoAttack").click(function() {
 
     // Attack1(playerOne, playerTwo);
     Attack2(playerTwo, playerOne);
+    calcDmg(playerOne, playerTwo);
 
-    $("#outputAreaTwo").append(`<div>${playerTwoInput.value} the ${playerTwoRobots.value} attack caused ${playerTwo.Damage} damage</div>`)
-    console.log("p2", this.value)
+    // $("#outputAreaTwo").append(`<div>${playerTwoInput.value} the ${playerTwoRobots.value} attack caused ${playerTwo.Damage} damage</div>`)
+
 })
 
 
@@ -78,11 +80,11 @@ $("#playerTwoAttack").click(function() {
 //////////////**************printing the players robot choice in the DOM*************\\\\\\\\\\\\\\\\\\\
 $("#playerOneRobots").change(function() {
     // $("#outputAreaOne").append(`<div>${this.value}</div`);
-    console.log("player one's robot is : ", this.value)
+    // console.log("player one's robot is : ", this.value)
 })
 $("#playerTwoRobots").change(function() {
     // $("#outputAreaTwo").append(`<div>${this.value}</div>`);
-    console.log("player two's robot is : ", this.value)
+    // console.log("player two's robot is : ", this.value)
 })
 
 
@@ -96,3 +98,8 @@ $("#playerOneInput").keyup(function() {
 $("#playerTwoInput").keyup(function() {
     // $("#outputAreaTwo").html(`<div>${this.value}</div>`)
 })
+
+
+
+
+//////

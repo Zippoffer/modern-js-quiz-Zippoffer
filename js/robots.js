@@ -7,8 +7,8 @@
 
 'use strict';
 
-var RNG = require("./randomNum");
-var GUN = require("./randomAttack");
+let RNG = require("./randomNum");
+let GUN = require("./randomAttack");
 
 function Robot() {
     this.Health = null;
