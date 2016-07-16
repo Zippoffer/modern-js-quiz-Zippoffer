@@ -8,7 +8,7 @@
 'use strict';
 
 var RNG = require("./randomNum");
-
+var GUN = require("./randomAttack");
 
 function Robot() {
     this.Health = null;
@@ -24,7 +24,7 @@ function GoBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.minDam = minDamage;
     this.maxDam = maxDamage;
     this.goBot = true;
-    this.Damage = RNG(this.minDam, this.maxDam);
+    this.Damage = GUN(this.minDam, this.maxDam);
     this.Health = RNG(this.minHealth, this.maxHealth);
     // console.log("GOBOThealth", this.Health)
     // console.log("GOBOTdamage", this.Damage)
@@ -38,7 +38,7 @@ function DevilBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.minDam = minDamage;
     this.maxDam = maxDamage;
     this.devilBot = true;
-    this.Damage = RNG(this.minDam, this.maxDam);
+    this.Damage = GUN(this.minDam, this.maxDam);
     this.Health = RNG(this.minHealth, this.maxHealth);
     // console.log("DEVILhealth", this.Health)
     // console.log("DEVILdamage", this.Damage)

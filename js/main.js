@@ -1,7 +1,7 @@
 'use strict';
 
 let DOM = require("./DOMHandler");
-let RNG = require("./randomNum");
+// let RNG = require("./randomNum");
 let robots = require('./robots');
 const $ = require('jQuery');
 let weapons = require('./weapons');
@@ -16,6 +16,7 @@ let robot2 = new robots.DevilBot();
 ////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
+
 
 const calcDmg = function(playerOne, playerTwo) {
     playerTwo.Health -= playerOne.Damage;

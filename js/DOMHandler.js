@@ -1,16 +1,21 @@
 'use strict';
 
 
-var main = require('./main');
-var robots = require('./robots');
-var weapons = require('./weapons');
+let main = require('./main');
+let robots = require('./robots');
+let weapons = require('./weapons');
 const $ = require('jQuery');
 
+
+
 const calcDmg = function(playerOne, playerTwo) {
-    playerTwo.Health -= playerOne.Damage;
+    playerTwo.Health - playerOne.Damage;
     return playerTwo;
 
 };
+
+
+
 
 const Attack1 = (playerOne, playerTwo) => {
 
@@ -25,10 +30,14 @@ const Attack2 = (playerTwo, playerOne) => {
     else $('#outputAreaOne').append(`<p><strong>${playerOne.name}</strong>: has ${playerOne.Health} left.</p>`);
 };
 
+
+
+
+
 ///////////////**********console logging the player attacks*************\\\\\\\\\\\\\\\\\\\
 $("#playerOneAttack").click(function() {
 
-    console.log("this again", calcDmg.value)
+
     let robotType1 = $("#playerOneRobots").val();
     let robotType2 = $("#playerTwoRobots").val();
     let playerOne = new robots[robotType1]();
