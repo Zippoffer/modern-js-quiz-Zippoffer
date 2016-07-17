@@ -9,8 +9,8 @@ let robots = require('./robots');
 // console.log(robots);
 ///////////////////
 
-let robot1 = new robots.GoBot();
-let robot2 = new robots.DevilBot();
+// let robot1 = new robots.GoBot();
+// let robot2 = new robots.DevilBot();
 
 
 
