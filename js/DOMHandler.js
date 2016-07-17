@@ -1,6 +1,6 @@
 'use strict';
 
-var $ = require('jQuery');
+// var $ = require('jQuery');
 let main = require('./main');
 // let robots = require('./robots')
 
@@ -8,7 +8,7 @@ let main = require('./main');
 
 
 const calcDmg = function(playerOne, playerTwo) {
-    playerTwo.Health - playerOne.Damage;
+    playerTwo.Health -= playerOne.Damage;
     return playerTwo;
 };
 // console.log("Damages", playerTwo.Health)
@@ -99,7 +99,9 @@ $("#playerTwoInput").keyup(function() {
     // $("#outputAreaTwo").html(`<div>${this.value}</div>`)
 })
 
-
+module.exports = {
+    calcDmg, Attack1, Attack2
+};
 
 
 //////

@@ -2,7 +2,7 @@
 
 
 
-let $ = require('jQuery');
+// let $ = require('jQuery');
 let DOM = require("./DOMHandler");
 let robots = require('./robots');
 
