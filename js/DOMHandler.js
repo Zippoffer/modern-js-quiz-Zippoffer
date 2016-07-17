@@ -25,14 +25,20 @@ const calcDmg = function(playerOne, playerTwo) {
 const Attack1 = (playerOne, playerTwo) => {
 
     calcDmg(playerOne, playerTwo);
-    if (playerTwo.Health <= 0) $('#outputAreaOne').empty().prepend(`<h4><strong>${playerTwo.name}</strong> has been slain!</h4>`);
-    else $('#outputAreaOne').append(`<p><strong>${playerTwo.name}</strong>: has ${playerTwo.Health} left.</p>`);
+    if (playerTwo.Health <= 0) {
+        $('#outputAreaOne').empty().prepend(`<h4><strong>${playerTwo.name}</strong> has been slain!</h4>`);
+    } else {
+        $('#outputAreaOne').append(`<p><strong>${playerTwo.name}</strong>: has ${playerTwo.Health} left.</p>`);
+    }
 };
 
 const Attack2 = (playerTwo, playerOne) => {
     calcDmg(playerTwo, playerOne);
-    if (playerOne.Health <= 0) $('#outputAreaOne').empty().prepend(`<h4><strong>${playerOne.name}</strong> has been slain!</h4>`);
-    else $('#outputAreaOne').append(`<p><strong>${playerOne.name}</strong>: has ${playerOne.Health} left.</p>`);
+    if (playerOne.Health <= 0) {
+        $('#outputAreaOne').empty().prepend(`<h4><strong>${playerOne.name}</strong> has been slain!</h4>`);
+    } else {
+        $('#outputAreaOne').append(`<p><strong>${playerOne.name}</strong>: has ${playerOne.Health} left.</p>`);
+    }
 };
 
 
