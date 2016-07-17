@@ -4,12 +4,14 @@ var $ = require('jQuery');
 let main = require('./main');
 let robots = require('./robots')
 
+let playerOne = null;
+let playerTwo = null;
 
 
 
 const calcDmg = function(playerOne, playerTwo) {
     playerTwo.Health -= playerOne.Damage;
-    return playerTwo;
+    return playerTwo.Health;
 };
 // console.log("Damages", playerTwo.Health)
 
@@ -40,15 +42,15 @@ $("#playerOneAttack").click(function() {
 
     let robotType1 = $("#playerOneRobots").val();
     let robotType2 = $("#playerTwoRobots").val();
-    let playerOne = new robots[robotType1]();
-    let playerTwo = new robots[robotType2]();
+    // let playerOne = new robots[robotType1]();
+    // let playerTwo = new robots[robotType2]();
     // console.log("playerOne", playerOne)
 
     Attack1(playerOne, playerTwo);
     // Attack2(playerTwo, playerOne);
     // calcDmg(playerOne, playerTwo);
     calcDmg(playerTwo.Health - playerOne.Damage);
-    // $("#outputAreaOne").append(`<div>${playerOneInput.value} the ${playerOneRobots.value} attack caused ${playerOne.Damage} damage</div>`)
+    $("#outputAreaOne").append(`<div>${playerOneInput.value} the ${playerOneRobots.value} attack caused ${playerOne.Damage} damage</div>`)
 
 })
 
@@ -61,8 +63,8 @@ $("#playerTwoAttack").click(function() {
 
     let robotType1 = $("#playerOneRobots").val();
     let robotType2 = $("#playerTwoRobots").val();
-    let playerOne = new robots[robotType1]();
-    let playerTwo = new robots[robotType2]();
+    // let playerOne = new robots[robotType1]();
+    // let playerTwo = new robots[robotType2]();
 
     // Attack1(playerOne, playerTwo);
     Attack2(playerTwo, playerOne);
@@ -79,10 +81,26 @@ $("#playerTwoAttack").click(function() {
 
 //////////////**************printing the players robot choice in the DOM*************\\\\\\\\\\\\\\\\\\\
 $("#playerOneRobots").change(function() {
+    if (playerOne === null) {
+        for (let i = 0; i < robots.GoBotClassArray.length; i++) {
+            if ($("#playerOneRobots").val() === robots.GoBotClassArray[i].name) {
+                playerOne = robots.GoBotClassArray[i];
+                console.log("playerOne", playerOne)
+            }
+        }
+    }
     // $("#outputAreaOne").append(`<div>${this.value}</div`);
     // console.log("player one's robot is : ", this.value)
-})
+});
 $("#playerTwoRobots").change(function() {
+    if (playerTwo === null) {
+        for (let i = 0; i < robots.DevilBotClassArray.length; i++) {
+            if ($("#playerTwoRobots").val() === robots.DevilBotClassArray[i].name) {
+                playerTwo = robots.DevilBotClassArray[i];
+                console.log("playerTwo", playerTwo)
+            }
+        }
+    }
     // $("#outputAreaTwo").append(`<div>${this.value}</div>`);
     // console.log("player two's robot is : ", this.value)
 })
