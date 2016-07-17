@@ -1,8 +1,8 @@
 'use strict';
 
-// var $ = require('jQuery');
+var $ = require('jQuery');
 let main = require('./main');
-// let robots = require('./robots')
+let robots = require('./robots')
 
 
 
