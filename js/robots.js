@@ -53,7 +53,7 @@ function MotoBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     // console.log("MotoBot", this.Health)
     // console.log("MotoAttack", this.Damage)
 }
-MotoBot.prototype = new GoBot(5, 89);
+MotoBot.prototype = new GoBot(5, 89, 23, 56);
 
 function TankBot(minRobotHealth, maxRobotHealth) {
     this.name = "Tank_Bot";
@@ -61,7 +61,7 @@ function TankBot(minRobotHealth, maxRobotHealth) {
     // console.log("TankBot", this.Health)
     // console.log("TankAttack", this.Damage)
 }
-TankBot.prototype = new GoBot(85, 100);
+TankBot.prototype = new GoBot(85, 100, 21, 25);
 
 function BlenderBot(minRobotHealth, maxRobotHealth) {
     this.name = "Blender_Bot";
@@ -69,7 +69,7 @@ function BlenderBot(minRobotHealth, maxRobotHealth) {
     // console.log("BlenderBot", this.Health)
     // console.log("BlenderAttack", this.Damage)
 }
-BlenderBot.prototype = new GoBot(85, 100);
+BlenderBot.prototype = new GoBot(85, 100, 12, 19);
 
 
 let motoBot = new MotoBot();
@@ -85,7 +85,7 @@ function RabbitBot(minRobotHealth, maxRobotHealth) {
     // console.log("RabbitBot", this.Health)
     // console.log("RabbitAttack", this.Damage)
 }
-RabbitBot.prototype = new DevilBot(80, 100);
+RabbitBot.prototype = new DevilBot(80, 100, 12, 55);
 
 function KittenBot(minRobotHealth, maxRobotHealth) {
     this.name = "Kitten_Bot";
@@ -93,7 +93,7 @@ function KittenBot(minRobotHealth, maxRobotHealth) {
     // console.log("KittenBot", this.Health)
     // console.log("KittenAttack", this.Damage)
 }
-KittenBot.prototype = new DevilBot(80, 100);
+KittenBot.prototype = new DevilBot(80, 100, 23, 24);
 
 function PuppyBot(minRobotHealth, maxRobotHealth) {
     this.name = "Puppy_Bot";
@@ -101,7 +101,7 @@ function PuppyBot(minRobotHealth, maxRobotHealth) {
     // console.log("PuppyBot", this.Health)
     // console.log("PuppyAttack", this.Damage)
 }
-PuppyBot.prototype = new DevilBot(80, 100);
+PuppyBot.prototype = new DevilBot(80, 100, 23, 45);
 
 
 let rabbitBot = new RabbitBot();
@@ -114,6 +114,10 @@ let puppyBot = new PuppyBot();
 var GoBotClassArray = [motoBot, tankBot, blenderBot];
 var DevilBotClassArray = [rabbitBot, kittenBot, puppyBot];
 
+
 module.exports = {
-    Robot, GoBot, DevilBot, MotoBot, TankBot, BlenderBot, RabbitBot, KittenBot, PuppyBot
-};
+    GoBotClassArray, DevilBotClassArray
+}
+// module.exports = {
+//     Robot, GoBot, DevilBot, MotoBot, TankBot, BlenderBot, RabbitBot, KittenBot, PuppyBot
+// };
