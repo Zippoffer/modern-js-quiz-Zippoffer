@@ -94,7 +94,7 @@ var DevilBotClassArray = [rabbitBot, kittenBot, puppyBot];
 
 module.exports = {
     GoBotClassArray, DevilBotClassArray
-}
+};
 module.exports = {
     Robot, GoBot, DevilBot, MotoBot, TankBot, BlenderBot, RabbitBot, KittenBot, PuppyBot, GoBotClassArray, DevilBotClassArray
 };

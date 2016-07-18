@@ -32,7 +32,7 @@ let handleError = function(task) {
  */
 
 let customOpts = {
-    entries: ['./js/main.js'],
+    entries: ['./js/DOMHandler.js'],
     debug: true
 };
 let opts = Object.assign({}, watchify.args, customOpts);

@@ -1,7 +1,7 @@
-'use strict';
+// 'use strict';
 
 
 
 
-let DOM = require("./DOMHandler");
-let robots = require('./robots');
+// let DOM = require("./DOMHandler");
+// let robots = require('./robots');

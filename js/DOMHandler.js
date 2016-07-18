@@ -1,8 +1,8 @@
 'use strict';
 
 var $ = require('jQuery');
-let main = require('./main');
-let robots = require('./robots')
+// let main = require('./main');
+let robots = require('./robots');
 
 let playerOne = null;
 let playerTwo = null;
@@ -21,7 +21,7 @@ const Attack1 = (playerOne, playerTwo) => {
         $('#outputAreaOne').empty().prepend(`<h4><strong>${playerTwo.name}</strong> has been slain!</h4>`);
     } else {
         $('#outputAreaOne').append(`<p><strong>${playerTwo.name}</strong>: has ${playerTwo.Health} health left.</p>`);
-        $("#outputAreaOne").append(`<div>${playerOneInput.value} the ${playerOneRobots.value} attack caused ${playerOne.Damage} damage</div>`)
+        $("#outputAreaOne").append(`<div>${$("playerOneInput").val()} the ${$("playerOneRobots").val()} attack caused ${playerOne.Damage} damage</div>`);
     }
 };
 
@@ -31,7 +31,7 @@ const Attack2 = (playerTwo, playerOne) => {
         $('#outputAreaTwo').empty().prepend(`<h4><strong>${playerOne.name}</strong> has been slain!</h4>`);
     } else {
         $('#outputAreaTwo').append(`<p><strong>${playerOne.name}</strong>: has ${playerOne.Health} health left.</p>`);
-        $("#outputAreaTwo").append(`<div>${playerTwoInput.value} the ${playerTwoRobots.value} attack caused ${playerTwo.Damage} damage</div>`)
+        $("#outputAreaTwo").append(`<div>${$("#playerTwoInput").val()} the ${$("playerTwoRobots").val()} attack caused ${playerTwo.Damage} damage</div>`);
     }
 };
 
@@ -47,7 +47,7 @@ $("#playerOneAttack").click(function() {
     calcDmg(playerOne, playerTwo);
 
 
-})
+});
 
 
 
@@ -63,7 +63,7 @@ $("#playerTwoAttack").click(function() {
     calcDmg(playerOne, playerTwo);
 
 
-})
+});
 
 
 
@@ -76,7 +76,7 @@ $("#playerOneRobots").change(function() {
         for (let i = 0; i < robots.GoBotClassArray.length; i++) {
             if ($("#playerOneRobots").val() === robots.GoBotClassArray[i].name) {
                 playerOne = robots.GoBotClassArray[i];
-                console.log("playerOne", playerOne)
+                console.log("playerOne", playerOne);
             }
         }
     }
@@ -88,23 +88,23 @@ $("#playerTwoRobots").change(function() {
         for (let i = 0; i < robots.DevilBotClassArray.length; i++) {
             if ($("#playerTwoRobots").val() === robots.DevilBotClassArray[i].name) {
                 playerTwo = robots.DevilBotClassArray[i];
-                console.log("playerTwo", playerTwo)
+                console.log("playerTwo", playerTwo);
             }
         }
     }
-})
+});
 
 
 
 /////////////************printing the players name in the DOM**************\\\\\\\\\\\\\\\\\\
 $("#playerOneInput").keyup(function() {
 
-})
+});
 
 
 $("#playerTwoInput").keyup(function() {
 
-})
+});
 
 module.exports = {
     calcDmg, Attack1, Attack2
