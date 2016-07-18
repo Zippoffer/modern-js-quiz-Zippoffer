@@ -12,7 +12,6 @@ let GUN = require("./randomAttack");
 
 function Robot() {
     this.Health = null;
-    // this.attack = null;
     this.name = null;
 }
 
@@ -26,8 +25,6 @@ function GoBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.goBot = true;
     this.Damage = GUN(this.minDam, this.maxDam);
     this.Health = RNG(this.minHealth, this.maxHealth);
-    // console.log("GOBOThealth", this.Health)
-    // console.log("GOBOTdamage", this.Damage)
 }
 GoBot.prototype = new Robot();
 
@@ -40,8 +37,6 @@ function DevilBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.devilBot = true;
     this.Damage = GUN(this.minDam, this.maxDam);
     this.Health = RNG(this.minHealth, this.maxHealth);
-    // console.log("DEVILhealth", this.Health)
-    // console.log("DEVILdamage", this.Damage)
 }
 DevilBot.prototype = new Robot();
 
@@ -49,25 +44,16 @@ DevilBot.prototype = new Robot();
 
 function MotoBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Moto_Bot";
-    // this.attack = null;
-    // console.log("MotoBot", this.Health)
-    // console.log("MotoAttack", this.Damage)
 }
 MotoBot.prototype = new GoBot(5, 89, 23, 56);
 
 function TankBot(minRobotHealth, maxRobotHealth) {
     this.name = "Tank_Bot";
-    // this.attack = null;
-    // console.log("TankBot", this.Health)
-    // console.log("TankAttack", this.Damage)
 }
 TankBot.prototype = new GoBot(85, 100, 21, 25);
 
 function BlenderBot(minRobotHealth, maxRobotHealth) {
     this.name = "Blender_Bot";
-    // this.attack = null;
-    // console.log("BlenderBot", this.Health)
-    // console.log("BlenderAttack", this.Damage)
 }
 BlenderBot.prototype = new GoBot(85, 100, 12, 19);
 
@@ -81,25 +67,16 @@ let blenderBot = new BlenderBot();
 
 function RabbitBot(minRobotHealth, maxRobotHealth) {
     this.name = "Rabbit_Bot";
-    // this.attack = null;
-    // console.log("RabbitBot", this.Health)
-    // console.log("RabbitAttack", this.Damage)
 }
 RabbitBot.prototype = new DevilBot(80, 100, 12, 55);
 
 function KittenBot(minRobotHealth, maxRobotHealth) {
     this.name = "Kitten_Bot";
-    // this.attack = null;
-    // console.log("KittenBot", this.Health)
-    // console.log("KittenAttack", this.Damage)
 }
 KittenBot.prototype = new DevilBot(80, 100, 23, 24);
 
 function PuppyBot(minRobotHealth, maxRobotHealth) {
     this.name = "Puppy_Bot";
-    // this.attack = null;
-    // console.log("PuppyBot", this.Health)
-    // console.log("PuppyAttack", this.Damage)
 }
 PuppyBot.prototype = new DevilBot(80, 100, 23, 45);
 
@@ -118,6 +95,6 @@ var DevilBotClassArray = [rabbitBot, kittenBot, puppyBot];
 module.exports = {
     GoBotClassArray, DevilBotClassArray
 }
-// module.exports = {
-//     Robot, GoBot, DevilBot, MotoBot, TankBot, BlenderBot, RabbitBot, KittenBot, PuppyBot
-// };
+module.exports = {
+    Robot, GoBot, DevilBot, MotoBot, TankBot, BlenderBot, RabbitBot, KittenBot, PuppyBot, GoBotClassArray, DevilBotClassArray
+};
