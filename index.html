@@ -12,31 +12,31 @@
 
 
 
-
+<div id="x">
+	<h1>ROBOT FIGHT!!!!!</h1>
+</div>
+<legend><h1 id="title">ROBOT FIGHT!!!!!</h1></legend>
 <div class="container">
 <div class="row">
-<!-- <div class="col-xs-12 col-md-8"> -->
- <div class="col-md-9 col-md-push-3">
+<div class="col-md-9 col-md-push-3">
+
 <div>
 <input id="playerOneInput" type="text" name="playerOne" placeholder="name your robot">
+
+
+
 <select id="playerOneRobots">
 	<option value="none">pick a robot</option>
 	<option value="Moto_Bot">MotoBot</option>
 	<option value="Tank_Bot">TankBot</option>
 	<option value="Blender_Bot">BlenderBot</option>
 </select>
-<!-- <button id="playerOneAttack">ATTACK</button> -->
-<button id="playerOneAttack" type="button" class="btn btn-danger">Attack</button>
+
+
+<!-- player one attack button -->
+<button id="playerOneAttack" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></button>
 </div>
 
-<!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
- -->
 
 <div>
 <input id="playerTwoInput" type="text" name="playerTwo" placeholder="name your robot">
@@ -46,19 +46,30 @@
 	<option value="Kitten_Bot">KittenBot</option>
 	<option value="Puppy_Bot">PuppyBot</option>
 </select>
-<!-- <button id="playerTwoAttack">ATTACK</button> -->
-<button id="playerTwoAttack" type="button" class="btn btn-danger">Attack</button>
+
+
+<!-- player two attack button -->
+<button id="playerTwoAttack" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></button>
 </div>
 
 
-<div id="outputAreaOne">
+
+
+
+<!-- <div class="jumbotron"> -->
+  
+	<div id="outputAreaOne">	
+	</div>
+	<div id="outputAreaTwo">
+	</div>
 	
-</div>
-<div id="outputAreaTwo">
-	
+<!-- </div> -->
 </div>
 </div>
 </div>
+
+<div id="bottom">
+	<!-- <h1 id="globe">RoboWar</h1 id="globe"> -->
 </div>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="dist/bundle.js"></script>
