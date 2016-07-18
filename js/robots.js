@@ -45,14 +45,14 @@ DevilBot.prototype = new Robot();
 function MotoBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Moto_Bot";
 }
-MotoBot.prototype = new GoBot(5, 89, 23, 56);
+MotoBot.prototype = new GoBot(60, 89, 23, 36);
 
-function TankBot(minRobotHealth, maxRobotHealth) {
+function TankBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Tank_Bot";
 }
 TankBot.prototype = new GoBot(85, 100, 21, 25);
 
-function BlenderBot(minRobotHealth, maxRobotHealth) {
+function BlenderBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Blender_Bot";
 }
 BlenderBot.prototype = new GoBot(85, 100, 12, 19);
@@ -65,12 +65,12 @@ let blenderBot = new BlenderBot();
 
 /////////*********DevilBots********\\\\\\\\\\\\
 
-function RabbitBot(minRobotHealth, maxRobotHealth) {
+function RabbitBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Rabbit_Bot";
 }
 RabbitBot.prototype = new DevilBot(80, 100, 12, 55);
 
-function KittenBot(minRobotHealth, maxRobotHealth) {
+function KittenBot(minRobotHealth, maxRobotHealth, minDamage, maxDamage) {
     this.name = "Kitten_Bot";
 }
 KittenBot.prototype = new DevilBot(80, 100, 23, 24);

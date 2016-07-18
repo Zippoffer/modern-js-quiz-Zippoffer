@@ -17,8 +17,7 @@ background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,25
 background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
-/*border-bottom-right-radius: 100%;
-border-bottom-left-radius: 2%;*/
+border-bottom-right-radius: 100%;
 
 }
 .jumbotron{
@@ -31,13 +30,23 @@ width: 84%;
 div {
 	float: left;
 	padding-right: 12%;
+
 }
 #title {
 	text-align: center;
-	color: red;
+	color: mediumspringgreen;
+	/*color: black;*/
 	font-size: 5vw;
 }
-legend {
+legend.topLegend {
+	position: relative;
+	/*top: 22%;*/
+	border: none;
+}
+.topLegend {
+	color: red;
+}
+legend.legend {
 	border: none;
 	-webkit-transform: rotate(-52deg);
 	   -moz-transform: rotate(-52deg);
@@ -57,16 +66,11 @@ legend {
 	        transform: rotate(38deg);
 	        position:relative;
 	        top: 445px;
-	        /*left: 44%;*/
 	        left:571px;
 	       
-	        z-index: 9;
+	        z-index: 7;
 }
-h1 {
-	 font-size: 5vw;
-	        color: cornflowerblue;
-	       
-}
+
 #bottom {
 	position: relative;
 	left: 44%;
@@ -74,9 +78,13 @@ h1 {
 	height: 550px;
 	width: 550px;
 	border-radius:200%; 
-	z-index: 9;
-	/*border-top-right-radius: 100%;*/
-	/*border-radius: 200%;*/
+	z-index: 8;
+	-webkit-transform: rotate(63deg);
+	   -moz-transform: rotate(63deg);
+	    -ms-transform: rotate(63deg);
+	     -o-transform: rotate(63deg);
+	        transform: rotate(63deg);
+
 
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100&1+0,0+100;Blue+to+Transparent */
 background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
