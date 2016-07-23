@@ -1,0 +1,103 @@
+body {
+	background-color: black;
+}
+.container {
+	/*margin-top: 2%;*/
+	/*border: 1px solid red;*/
+	/*width: 36%;*/
+	min-height: 500px;
+	width: 66%;
+	/*padding-top: 2%;*/
+	padding-bottom: 2%;
+	padding-left: 0;
+	padding-right: 4%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+border-bottom-right-radius: 100%;
+
+}
+.jumbotron{
+	margin-top: 2%;
+/*width: 34.5%;*/
+width: 84%;
+
+}
+
+div {
+	float: left;
+	padding-right: 12%;
+
+}
+#title {
+	text-align: center;
+	color: mediumspringgreen;
+	/*color: black;*/
+	font-size: 5vw;
+}
+legend.topLegend {
+	position: relative;
+	/*top: 22%;*/
+	border: none;
+}
+.topLegend {
+	color: red;
+}
+legend.legend {
+	border: none;
+	-webkit-transform: rotate(-52deg);
+	   -moz-transform: rotate(-52deg);
+	    -ms-transform: rotate(-52deg);
+	     -o-transform: rotate(-52deg);
+	        transform: rotate(-52deg);
+	        position:relative;
+	        top: 332px;
+	        left: 16%;
+}
+#x {
+		border: none;
+	-webkit-transform: rotate(38deg);
+	   -moz-transform: rotate(38deg);
+	    -ms-transform: rotate(38deg);
+	     -o-transform: rotate(38deg);
+	        transform: rotate(38deg);
+	        position:relative;
+	        top: 445px;
+	        left:571px;
+	       
+	        z-index: 7;
+}
+
+#bottom {
+	position: relative;
+	left: 44%;
+	bottom: 500px;
+	height: 550px;
+	width: 550px;
+	border-radius:200%; 
+	z-index: 8;
+	-webkit-transform: rotate(63deg);
+	   -moz-transform: rotate(63deg);
+	    -ms-transform: rotate(63deg);
+	     -o-transform: rotate(63deg);
+	        transform: rotate(63deg);
+
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100&1+0,0+100;Blue+to+Transparent */
+background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+box-shadow: 0 12px 10px black;
+}
+
+#outputAreaOne {
+	color: red;
+}
+
+#outputAreaTwo{
+	color: wheat;
+}

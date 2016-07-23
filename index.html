@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>robutt wharves</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+
+<legend class="legend"><h1 id="title">ROBOT FIGHT!!!!!</h1></legend>
+<div class="container">
+<div class="row">
+<div class="col-md-9 col-md-push-3">
+
+<div>
+<input id="playerOneInput" type="text" name="playerOne" placeholder="name your robot">
+
+
+
+<select id="playerOneRobots">
+	<option value="none">pick a robot</option>
+	<option value="Moto_Bot">MotoBot</option>
+	<option value="Tank_Bot">TankBot</option>
+	<option value="Blender_Bot">BlenderBot</option>
+</select>
+
+
+<!-- player one attack button -->
+<button id="playerOneAttack" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></button>
+</div>
+
+
+<div>
+<input id="playerTwoInput" type="text" name="playerTwo" placeholder="name your robot">
+<select id="playerTwoRobots">
+	<option value="none">pick a robot</option>
+	<option value="Rabbit_Bot">RabbitBot</option>
+	<option value="Kitten_Bot">KittenBot</option>
+	<option value="Puppy_Bot">PuppyBot</option>
+</select>
+
+
+<!-- player two attack button -->
+<button id="playerTwoAttack" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></button>
+</div>
+
+
+
+
+
+
+  
+	<div id="outputAreaOne">	
+	</div>
+	<div id="outputAreaTwo">
+	</div>
+	
+
+</div>
+</div>
+</div>
+
+<div id="bottom">
+
+	
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="dist/bundle.js"></script>
+</body>
+</html>
